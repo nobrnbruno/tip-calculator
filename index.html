@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <title>Calculador de Gorjetas</title>
+  </head>
+  <body>
+    <div id="bigbox">
+        <div>
+            <h1 class="title">Calculador de Gorjetas</h1>
+        </div>
+        <div id="formWhole">
+            <form class="tipForm" id="tipForm">
+                <label for="bill">
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" step="0.01" min=0 placeholder="100,00" name="bill" class="formInput" id="bill">
+                </p>
+                <label for="service">
+                    <p>Como foi seu serviço?</p>
+                </label>
+                <p>
+                    <select name="service" id="service" class="formSelect">
+                        <option disable selected value="0">Escolha uma opção</option>
+                        <option value="0.3">30% - Incrível</option>
+                        <option value="0.2">20% - Ótimo</option>
+                        <option value="0.15">15% - Bom</option>
+                        <option value="0.1">10% - Regular</option>
+                        <option value="0.05">05% - Ruim</option>
+                    </select>
+                </p>
+                <label for="clients">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" min=1 name="clients" id="clients" class="formInput"> pessoas
+                </p>
+                <button type="submit" class="formSubmit">Calcular</button>
+            </form>
+        </div>
+        <div id="totalTip">
+            Gorjeta total: R$<span id="tip">0,00</span><span id="each">cada</span>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
